@@ -1,0 +1,15 @@
+export const deployData = {
+    "criando-rede-social": "https://ricardocza.github.io/criando-rede-social/index.html",
+    "Git-search": "https://ricardocza.github.io/Git-search/",
+    "livingbase-ricardocza": "https://ricardocza.github.io/livingbase-ricardocza/",
+    "m1-entrega-carrinho-de-compras-ricardocza": "https://ricardocza.github.io/m1-entrega-carrinho-de-compras-ricardocza/",
+    "m1-entrega-javascript-lojageek-ricardocza": "https://ricardocza.github.io/m1-entrega-javascript-lojageek-ricardocza/",
+    "m1-entrega-mercado-ricardocza": "https://ricardocza.github.io/m1-entrega-mercado-ricardocza/",
+    "m1-sprint_2-kenzieflix-ricardocza": "https://ricardocza.github.io/m1-sprint_2-kenzieflix-ricardocza/",
+    "open-music-base": "https://ricardocza.github.io/open-music-base/",
+    "petinfobase-ricardocza": "https://ricardocza.github.io/petinfobase-ricardocza/",
+    "react-kenzie-hub": "https://react-entrega-kenzie-hub-ricardocza.vercel.app/",
+    "Typescript-Burguer-Kenzie": "https://hamburgueria-kenzie-2-0-ricardocza.vercel.app/",
+    "Webwomen": "https://ricardocza.github.io/Webwomen/",
+    "wg44-frontend": "https://wg44-frontend.vercel.app/",
+}

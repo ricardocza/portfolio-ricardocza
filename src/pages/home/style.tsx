@@ -5,21 +5,25 @@ import { Button } from "@/styles/Buttons";
 import img from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
+  position: "relative",
   backgroundColor: "$brand1",
   padding: "12rem 0 8rem 0",
   backgroundImage: `url(${img})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "bottom 1rem right 1rem",
+  height: "615px",
   "@mobile": {
+    height: "635px",
     padding: "9rem 0 6rem 0",
   },
+  "@media(max-width: 600px)": {
+    backgroundImage: "none"
+  }
 });
 
-export const HeaderContent = styled("div", {
-  maxWidth: "100%",
-  width: "36rem",
-  display: "flex",
-  flexDirection: "column",
+export const HeaderContent = styled("div", {  
+  width: "100%",
+  display: "flex",  
   gap: "$2",
 });
 

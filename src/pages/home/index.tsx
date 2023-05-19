@@ -23,31 +23,52 @@ import {
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
 } from "./style";
-
+import { useEffect, useState } from "react";
+import { AboutMe } from "@/components/AboutMe";
+import { HeaderMain } from "@/components/HeaderMain";
+import {motion} from 'framer-motion'
 
 export const Home = (): JSX.Element => {
+  const [aboutMe, setAboutMe] = useState(false as boolean)
+  
+
+  useEffect(() => {
+    
+    const handleScroll = () => {
+      if (aboutMe && window.scrollY > 250) {                
+        setAboutMe(false)
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [aboutMe])
+  
+  const changeAboutMe = () => {
+    setAboutMe(!aboutMe)
+  }
+
+  
   return (
     <main>
       <Header>
-        <Container>
+        <Container>          
           <HeaderContent>
-            <Text as="h1" type="heading1" color="grey5">
-              Criando experiências por meio da tecnologia{" "}
-            </Text>
-            <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
-              desenvolvendo habilidades
-            </Text>
-            <HeaderButtonsArea>
-              <Button as="a" href="#projetos">
-                Projetos
-              </Button>
-              <Button as="a" href="#tecnologias" type="btLink" color="grey5">
-                Tecnologias
-              </Button>
-            </HeaderButtonsArea>
-          </HeaderContent>
+            {!aboutMe 
+            ?
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.5 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                transition={{ duration: 0.5 }}>
+              <HeaderMain changeFunction={changeAboutMe} aboutState={aboutMe} aboutSetState={setAboutMe}/>
+            </motion.div>
+            :            
+            <AboutMe changeFunction={changeAboutMe}/>
+          }
+            
+          </HeaderContent>         
         </Container>
       </Header>
       <StackSection id="tecnologias">
