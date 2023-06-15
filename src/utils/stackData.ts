@@ -7,6 +7,7 @@ import imgReact from "../public/static/img/stack/react.svg";
 import { FaPython } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
+import { SiCsharp } from "react-icons/si"
 
 export const stackData = [
   {
@@ -36,4 +37,5 @@ export const stackData = [
   { title: "Python", img: FaPython },
   { title: "TypeScript", img: SiTypescript },
   { title: "Docker", img: FaDocker },
+  { title: "C#", img: SiCsharp },
 ];
